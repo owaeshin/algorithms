@@ -39,5 +39,6 @@ public class OneEditDistance {
         System.out.println(new OneEditDistance().isOneEditDistance("abc", "ab"));
         System.out.println(new OneEditDistance().isOneEditDistance("abd", "abc"));
         System.out.println(new OneEditDistance().isOneEditDistance("1203", "1213"));
+        System.out.println(new OneEditDistance().isOneEditDistance("1203", "12134"));
     }
 }
