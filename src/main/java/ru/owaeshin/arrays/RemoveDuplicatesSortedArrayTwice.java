@@ -17,13 +17,23 @@ public class RemoveDuplicatesSortedArrayTwice {
     // [1,1,1,1] -> [1,..]
     // [0,0,0,1,1,1,2,2,3,3,4] -> [0,1,2,3,4,_,_,_,_,_]
     public int removeDuplicates(int[] nums) {
-        int i = 0;
-        for (int j = 0; j < nums.length; j++) {
-            if (i < 2 || nums[j] > nums[i-2]) {
-                nums[i++] = nums[j];
+        int previous = nums[0];
+        int pSlow = 0;
+        int pFast = 1;
+        int maxDuplicates = 0;
+        while (pFast < nums.length) {
+            int fastValue = nums[pFast];
+            if (fastValue > previous && maxDuplicates > 1) {
+                nums[pSlow] = fastValue;
+                pSlow++;
+                previous = fastValue;
+                maxDuplicates = 1;
+            } else if (fastValue == previous) {
+                pSlow++;
+                maxDuplicates++;
             }
+            pFast++;
         }
-        return i;
+        return pSlow;
     }
 }
-//

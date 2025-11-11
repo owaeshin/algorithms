@@ -5,12 +5,12 @@ import ru.owaeshin.arrays.RemoveDuplicatesSortedArrayTwice;
 
 import java.util.Arrays;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class RemoveDuplicatesSortedArrayTwiceTest {
     @Test
     void removeDuplicates() {
-        int[] input = new int[]{0,0,1,1,1,2,2,3,3,3,3,4};
+        int[] input = new int[]{0, 0, 1, 1, 1, 2, 2, 3, 3, 3, 3, 4};
 
         RemoveDuplicatesSortedArrayTwice removeElement = new RemoveDuplicatesSortedArrayTwice();
 

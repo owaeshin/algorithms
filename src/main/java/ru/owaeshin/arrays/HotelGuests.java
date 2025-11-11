@@ -5,5 +5,6 @@ public class HotelGuests {
     
     public int eraseOverlapIntervals(int[][] intervals) {
 
+        return 0;
     }
 }
